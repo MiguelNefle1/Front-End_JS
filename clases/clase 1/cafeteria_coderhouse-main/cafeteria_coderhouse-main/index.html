@@ -1,0 +1,164 @@
+<!DOCTYPE html><!--html en la version 5-->
+<html lang="es"><!--raiz de la pagina web, lang es un atributo que indica el lenguaje, es-->
+    <head><!--head es la etiqueta de las configuraciones del navegador-->
+        <meta charset="UTF-8"><!--el atributo charset con el valor utf8 le indica la codificacion de los caracteres, me permite escribir con ñ, los acentos-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--etiqueta de responsive-->
+        <title>CoderHouse | Cafetería de autor</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./css/estilos.css">
+        <script src="https://kit.fontawesome.com/cbbd236219.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <!--body es la etiqueta que contiene el contenido principal de la pagina-->
+    <body>
+        <!-- cabecera -contenido propio de cada pagina- pie de pagina -->
+         <header>
+            <a href="index.html">
+                <img src="./assets/img/logo_cafe.png" alt="Logo de cafeteria CoderHouse, es una taza de cafe marron con un grano de cafe dibujado" width="80px">
+            </a>
+           
+           
+            <nav>
+                <!--lista desordenada ul>li*5-->
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./pages/productos.html">Productos</a>
+                    </li>
+                    <li>
+                        <a href="./pages/nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="./pages/sucursales.html">Sucursales</a>
+                    </li>
+                    <li>
+                        <a href="./pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+         </header>
+         <main>
+           <section class="seccionPrincipalIndex">
+                <h1 class="thin">Tu café preferido <div class="mayuscula negrita">siempre cerca</div> </h1>
+                <p class="colorFuenteRosa colorFuenteNaranja">Blends, varietales, cafés del mundo.</p>
+                <p>Encontrá tu Tienda mas cercana y tentate con nuestros sabores.</p>
+                <a class="mayuscula boton" href="./pages/sucursales.html">Encontranos</a><!--la estetica del boton se la damos con css-->
+               
+            </section>
+            <section class="seccionNuestrosProductosIndex">
+                <h2>Nuestros Productos</h2>
+                <img src="./assets/img/pack_cafe.jpg" alt="pack cafe" >
+                <img src="./assets/img/pack_cafe.jpg" alt="pack cafe" >
+                <img src="./assets/img/pack_cafe.jpg" alt="pack cafe" >
+                <img src="./assets/img/pack_cafe.jpg" alt="pack cafe" >
+                <img src="./assets/img/pack_cafe.jpg" alt="pack cafe" >
+                <img src="./assets/img/pack_cafe.jpg" alt="pack cafe" >
+            </section>
+            <section class="seccionCafePlatosIndex">
+                <div class="cafeExpertoIndex">
+                    <div>
+                        <p>Aprendé a hacer tu café como un experto</p>
+                        <h2>SECRETOS DEL BARISTA</h2>
+                        <!--enlace interno a otra pagina-->
+                        <a class="boton" href="./pages/nosotros.html#prepararCafe">VER</a>
+                    </div>
+                    
+                </div>
+                <div class="nuestrosPlatosIndex">
+                    <div>
+                        <p>Conoce nuestras delicias</p>
+                        <h2>NUESTROS PLATOS</h2>
+                        <a class="boton" href="./pages/productos.html#nuestrosPlatos">VER</a>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="seccionSucursalesIndex">
+                <div>
+                    <h2>SIEMPRE HAY UN</h2>
+                    <h2 class="colorCrema">TIENDA CERCA TUYO</h2>
+                    <p>Encontrá nuestra sucursal más cercana.</p>
+                    <a class="boton" href="">INGRESAR</a>
+                </div>
+               
+            </section>
+           
+            <section class="seccionClientesIndex">
+                <h2>Conoce las opiniones de nuestros clientes</h2>
+                <div>
+                    <img src="./assets/img/opinion_mujer.jpg" alt="imagen de un cliente">
+                    <h3>Nombre de cliente</h3>
+                    <p>Reseña</p>
+                </div>
+                <div>
+                    <img src="./assets/img/opinion_mujer.jpg" alt="imagen de un cliente">
+                    <h3>Nombre de cliente</h3>
+                    <p>Reseña</p>
+                </div>
+                <div>
+                    <img src="./assets/img/opinion_mujer.jpg" alt="imagen de un cliente">
+                    <h3>Nombre de cliente</h3>
+                    <p>Reseña</p>
+                </div>
+                <div>
+                    <img src="./assets/img/opinion_mujer.jpg" alt="imagen de un cliente">
+                    <h3>Nombre de cliente</h3>
+                    <p>Reseña</p>
+                </div>
+            </section>
+         </main>
+         <footer>
+            <img src="./assets/img/logo_cafe.png" alt="Logo de cafeteria CoderHouse, es una taza de cafe marron con un grano de cafe dibujado" width="80px">
+            <div>
+                <h3>Contenidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="./pages/productos.html">Productos</a></li>
+                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="./pages/sucursales.html">Sucursales</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Necesitás Ayuda</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="./pages/productos.html">Productos</a></li>
+                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="./pages/sucursales.html">Sucursales</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>SUSCRIBITE A NUESTRO NEWSLETTER</h3>
+                <form action="">
+                    <input type="email" placeholder="Tu Email" id="emailSuscripcion">
+                    <input type="submit" value="Suscribirme" id="suscribirme">
+                </form>
+            </div>
+            <div>
+                <h3>CONECTATE CON NOSOTROS</h3>
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://web.whatsapp.com/" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <hr>
+            <div>
+                <p>© Copyright 2025 CoderHouse Café - Todos los    derechos reservados.
+                    Todos los logos, productos, marcas y nombres aqui utilizados son propiedad registrada.
+                </p>
+            </div>
+           
+         </footer>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
+    </body>
+</html>
+

@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*reseteo de valores*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    padding:15px;
+}
+/*valores generales*/
+h1{
+    /*font-family: 'Playwrite VN', sans-serif;*/
+    font-size: 3rem;/*3*16px*/
+    color: #4d1a0f;
+    padding-top:20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+@media screen and (max-width:768px){
+    h1{
+        font-size: 2rem;
+        color: blue;
+    }
+}
+h2{
+    font-size: 2rem;/*2*16px*/
+    color: #1e1c1b;
+    margin-top:20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.mayuscula{
+    text-transform: uppercase;
+}
+.negrita{
+    font-weight: bold;
+}
+.thin{
+    font-weight: 200;
+}
+.boton{
+    padding:10px;
+    text-decoration: none;
+    display: inline-block;
+    color:white;
+    border: 1px solid white;
+    &:hover{
+        box-shadow: 3px -2px 38px 14px rgba(255, 255, 255, 0.717);
+        border: initial;
+        border-radius: 5px;
+    }
+}
+.colorCrema{
+    color:#976d63;
+}
+/*Estilos del header*/
+header,footer{
+    background-color: #1e1c1b;
+    padding:10px;
+    ul{
+        list-style:none;
+        a{
+            color: #fff;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    /*estilo para las anclas que estan en el footer pero no estan dentro de un ul*/
+    a{
+        text-decoration: none;
+    }
+    h3,i,p{
+        color:#976d63;
+    }
+    i{
+        font-size: 2rem;
+    }
+    h3{
+        margin-bottom: 10px;
+    }
+    .fa-whatsapp{
+        color: #25d366;
+        font-size: 3rem;
+        position:fixed;
+        right: 20px;
+        bottom: 30px;
+    }
+}
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    nav{
+        width: 50%;
+        ul{
+           
+            display:flex;
+            justify-content: space-evenly;
+            width: 100%;
+            /* li{
+                 margin-right: 20px;
+             }*/
+         }
+    }
+}
+@media screen and (max-width:768px){
+    header{
+        nav{
+            ul{
+                flex-direction:column;
+                li{
+                    margin-bottom: 10px;
+                    text-align: right;
+                }
+            }
+        }
+    }
+   
+}
+/*Estilos del main del index*/
+.seccionPrincipalIndex{
+    height: 75vh;
+    padding:10px;
+    background-image: url("../assets/img/fondo_principal_index.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    h1{
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        text-align: left;
+        font-size: 3.5rem;
+    }
+   
+    p{
+      color:white;
+    }
+   
+    a{
+        margin-top:30px;
+    }
+}
+@media screen and (max-width:768px){
+    .seccionPrincipalIndex{
+        height: 60vh;
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            color:violet;
+        }
+    }
+  
+}
+
+.seccionNuestrosProductosIndex{
+    padding:10px;
+    margin-bottom:20px ;
+   /* background-color: #b7b7b7;*/
+    text-align: center;
+    img{
+        width:180px;
+    }
+   
+}
+.seccionCafePlatosIndex{
+    display:flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    .cafeExpertoIndex, .nuestrosPlatosIndex{
+        text-align: left;
+        padding:10px;
+        width: 49%;
+        height: 350px;
+        background-image: linear-gradient(to right top, #00000093,  #29020293), url("../assets/img/cafe.jpg");
+        background-position: center;
+        background-size: cover;
+        backdrop-filter: blur(15px);
+        
+        color:white;
+        h2{
+            color:white;
+            text-align: left;
+        }
+    }
+    .nuestrosPlatosIndex{
+       background-image:linear-gradient(to right top, #00000093,  #6b000093), url("../assets/img/waffles.jpg");
+    }
+
+}
+@media screen and (max-width: 768px){
+    .seccionCafePlatosIndex{
+        row-gap: 20px;
+        .cafeExpertoIndex, .nuestrosPlatosIndex{
+            width: 100%;
+        }
+    }
+    
+}
+.seccionSucursalesIndex{
+    height: 95vh;
+    text-align: center;
+    margin-top:20px;
+    padding: 10px;
+    background-image: url("../assets/img/sucursales.jpg"); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:white;
+    /*centrar verticalmente desde el padre*/
+    place-content: center; /*esto es superior a flexbox y es nuevo!*/
+    h2{
+        color:white;
+    }
+    p{
+        margin-bottom: 30px;
+    }
+    .colorCrema{
+        color:#976d63;
+        font-size: 3rem;
+    }
+}
+
+.seccionClientesIndex{
+    padding:10px;
+    text-align: center;
+    div{
+        display: inline-block;
+        margin: 10px;
+    }
+    h2{
+        margin-bottom: 20px;
+    }
+    img{
+        width: 100px;
+       
+    }
+}
+/*Estilos pagina Nosotros*/
+.seccionNosotros{
+    padding:10px;
+    text-align: center;
+    .contenedor{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        .parrafoNosotros{
+            text-align: justify;
+            width: 49%;
+            line-height: 1.5;
+            p{
+                margin-bottom: 15px;
+            }
+    
+        }
+        .imagenFondoNosotros{
+            display:block;
+            background-image: url("../assets/img/sucursales.jpg");
+            background-position: center;
+            background-size: cover;
+            height: 60vh;
+            width: 48%;
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .seccionNosotros{
+         .contenedor{
+             row-gap: 20px;
+             flex-direction: column-reverse;
+            .parrafoNosotros, .imagenFondoNosotros{
+                width: 100%;
+            }
+            .imagenFondoNosotros{
+                display:none;
+            }
+        }
+    }
+}
+.prepararCafe{
+    text-align: center;
+    .videoCafe{
+        width: 600px;
+        height: 400px;
+    }
+    @media screen and (max-width:768px){
+        .videoCafe{
+            width: 100%;
+        
+        }
+        
+    }
+}
+/*Estilo de pagina productos*/
+/*Ejemplo de position absolute y relative*/
+.principalProductos{
+    background-color: #976d63;
+    padding-top:20px;
+    padding-bottom: 20px;
+    .galeria{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: 20px;
+        .item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff ;
+            width: 400px;
+            height: 300px;
+            img{
+                width: 85%;
+                object-fit: cover;
+            }
+            h2{
+                font-size: 1rem;
+            }
+        }
+        .item:nth-child(4){
+            background-color: #cb6ff3 ;
+        }
+    }
+
+   
+}
+
+.ancla:link{
+    color: #f24115;
+}
+.ancla:visited{
+    color: #f215f2;
+}
+
+.ancla:hover{
+    color: #41f276;
+}
+.ancla:active{
+    color: #5c08f8;
+}
+
+
+/* ESCRITORIO PRIMERO : QUE COSAS QUIERO AJUSTAR PARA LA VERSION MOBILE */
+/*MOBILE FIRST: QUE COSAS QUIERO AJUSTAR PARA LA VERSION DE ESCRITORIO*/

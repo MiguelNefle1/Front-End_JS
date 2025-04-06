@@ -1,0 +1,109 @@
+/* aca dentro va el comentario 
+   este comentario es multilinea
+*/
+/*
+css significa , hojas de estilos en cascada
+y para que modifiquen mi html, tengo que linkear mi hoja de estilo a cada hoja de html de mi sitio website
+Sintaxis basica de css*/
+/*
+    selector {
+        propiedad: valor;
+        propiedad:valor;
+        propiedad: valor;
+    }
+    4 selectores basicos:
+    - Universal --> * , Este selector que es asterisco, selecciona a todos los elementos del html
+    *{
+        propiedad: valor;
+    }
+    - Etiqueta --> h1, p, a, div, etc --> a cierta etiqueta de html, le damos una propiedad y un valor en particular
+    h1{
+        propiedad: valor;
+    }
+    - Clase --> .clase, este selector le damos una clase a un grupo de elementos y le damos una propiedad y un valor en particular, esta clase o clasificacion de elementos, se le asigna en el html, y se le puede asignar a varias etiquetas, no solo a una, y se le asigna con el atributo class="clase"
+    a cada etiqueta le puedo agregar 1 o n clases
+    para llamar a la clase desde el css, utilizo un . adelante del nombre
+    .clase{
+        propiedad: valor;
+    }
+    - Id --> #id, este selector le damos un id a un elemento en particular, y le damos una propiedad y un valor en particular, esta id se le asigna en el html, y se le asigna con el atributo id="id"
+*/
+/*Especificidad de selectores y cascada 
+
+que selector es más especifico que otro?, cual es más importante entre dos selectores que quieren aplicar la misma propiedad pero con distintos valores?
+
+*< etiqueta < clase < id < estilos en linea(NO ES BUENA PRACTICA)
+
+la especificidad mata a la cascada
+
+y que es la cascada? Cuando tengo dos selectores del mismo nivel de especificidad afectando a la misma etiqueta, con la misma propiedad pero distinto valor, predomina el que se encuentra más abajo en el css, es decir, el que se encuentra más abajo en el css, es el que se aplicará en el html
+
+recomendación:
+Como somos principiantes sugiero minimizar la cantidad de especificidades, recomiendo utilizar clases, 
+de esa manera si ustedes tienen un problema de que un estilo no se esta aplicando a una etiqueta en particular, es mas facil de analizar, porque en ese caso al ser todos clases, el unico que afecta es la cascada
+
+*/
+/*Herencia de padres a hijos
+
+el concepto de herencia, dice que los hijos que no tienen la propiedad que el padre que el padre si tienen la heredan, y si el hijo tiene una propiedad que el padre no tiene, el hijo no la hereda
+si el hijo tiene la misma propiedad del padre entonces NO hereda
+
+
+*/
+/*hay más selectores, para ser mucho más especificos, pero lo veremos con ejemplos en otras clases*/
+
+/*estructura del proyecto en carpetas
+5 html con su contenido semantico como vimos en clase
+css-- estilos.css
+
+empiecen a pensar en la paleta de colores, tipografias(titulos , parrafos ), tamaños de fuentes, etc
+
+*/
+/*unidades de medidas de fuentes:
+pixel absoluta
+porcentaje relativa
+rem relativa a lo que eligio el user en la configuracion, es decir a la etiqueta html
+unidades de medida para el height de los contenedores
+vh 1vh= 1% de la pantalla visible del navegador
+vw 1vw= 1% del ancho de la pantalla visible del navegador
+% porcentaje unidad relativa
+px pixel unidad absoluta
+como cambiar una imagen de fondo de un contenedor, o como una aplicar una imagen
+backgraund-image: url("ruta de la imagen");
+background-size: cover;--> la imagen se ajusta al contenedor
+background-position: center;--> la imagen se centra en el contenedor
+background-color: color de fondo de una etiqueta
+*/
+/*se dice que todos los elementos son cajas, todas las cajas
+
+box model:
+
+comportamiento de la etiqueta dentro de el html: display
+ancho: width
+alto: height
+borde: border
+espacidado interno  entre el contenido de la etiqueta y el borde: padding
+espaciado externo: margin
+border-radius
+reseteo de valores por defecto de las etiquetas
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*/
+
+/*position:
+
+static: es el valor por defecto, no se puede mover
+
+relative: este valor permite mover el elemento respecto a su posicion original en el html, pero no afecta a los demas elementos, lo muevo a partir del lugar que ocupa en su padre tanto como necesite combinandolo con top, botoom, left o el right, no pierde lugar en el flujo del documento(en el elemento padre que el espacio que ocupaba ese elemento)
+
+absolute: el elemento pierde lugar en el padre y se mueve a partir del body, si el padre tiene position:relative, entonces el hijo se mueve a partir del padre, si el padre no tiene position:relative, entonces el hijo se mueve a partir del body
+
+fixed: el elemento se mueve a partir del viewport, es decir, no se mueve con respecto al body, siempre se ubica en la misma posicion en pantalla, aunque se mueva el scroll, este sirve para el icono de whatsapp
+
+sticky: el elemento se mueve a partir del padre, pero cuando llega a cierto punto se queda fijo en pantalla, es decir, se mueve con el scroll, si el padre tiene poco espacio se va a mover poco con el scroll. 
+ejemplo: sirve para dejar el header fijo en pantalla cuando se hace scroll
+
+*/
