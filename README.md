@@ -1,49 +1,29 @@
-# Introducción a la Programación con Python
+# Curso Front-End JS
 
-Bienvenidos al repositorio del curso **Introducción a la Programación con Python**. Aquí encontrarás el material utilizado durante las clases, ejercicios prácticos y ejemplos para reforzar tu aprendizaje.
+Bienvenido al repositorio del curso de Front-End con JavaScript. Aquí encontrarás todos los archivos, recursos y proyectos relacionados con el curso que estoy impartiendo.
+
+## Descripción del Curso
+
+Este curso está diseñado para enseñar los fundamentos y las mejores prácticas del desarrollo Front-End utilizando JavaScript. A lo largo del curso, cubriremos temas como:
+
+- HTML y CSS básico y avanzado.
+- Fundamentos de JavaScript.
+- Manipulación del DOM.
+- Uso de APIs y Fetch.
+- Introducción a frameworks como React.
+- Buenas prácticas de desarrollo y herramientas modernas.
 
 ## Estructura del Repositorio
 
-- **Clases**: Carpeta que contiene los archivos de código y presentaciones utilizadas en cada sesión.
-- **Ejercicios**: Propuestas de práctica con sus respectivas soluciones.
-- **Recursos adicionales**: Material de apoyo, enlaces a documentación y herramientas recomendadas.
+El repositorio está organizado de la siguiente manera:
 
-## Requisitos Previos
+- **/clases**: Contiene los archivos y ejemplos vistos en cada clase.
+- **/proyectos**: Aquí se encuentran los proyectos realizados durante el curso.
+- **/recursos**: Enlaces, documentos y recursos adicionales recomendados para el curso.
+- **/ejercicios**: Ejercicios prácticos para reforzar los conocimientos adquiridos.
 
-Para aprovechar este material, asegúrate de contar con:
+## Cómo Usar Este Repositorio
 
-- Python 3.10 o superior instalado.
-- Un editor de texto o IDE (recomendamos Visual Studio Code).
-
-## Uso del Repositorio
-
-1. **Clonar el repositorio**:
+1. Clona este repositorio en tu máquina local:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   ```
-2. **Navegar por las carpetas** según el tema o clase de interés.
-3. **Ejecutar los ejemplos** directamente en tu entorno local:
-   ```bash
-   python nombre_archivo.py
-   ```
-
-## Contenido Destacado
-
-1. **Fundamentos de Python**: Variables, estructuras de control, ciclos y funciones.
-2. **Ejercicios Prácticos**: Resolución paso a paso de problemas comunes.
-3. **Proyectos Finales**: Ideas para consolidar los conocimientos adquiridos.
-
-## Sugerencias
-
-- Si encuentras algún error o tienes sugerencias, siéntete libre de compartir tus comentarios.
-- Practica regularmente para dominar los conceptos.
-
-## Contacto
-
-Si tienes dudas o necesitas más información, puedes comunicarte conmigo a través de los canales oficiales del curso.
-
-[miguelnefle@gmail.com](mailto\:miguelnefle@gmail.com)
-
-[www.linkedin.com/in/miguel-ángelnefle](http://www.linkedin.com/in/miguel-ángelnefle)
-
-
+   git clone https://github.com/tu-usuario/curso-frontend-js.git
