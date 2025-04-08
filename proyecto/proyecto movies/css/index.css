@@ -1,0 +1,57 @@
+@import 'header.css';
+@import 'main.css';
+@import 'footer.css';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background-color: #181419;
+    color:white; 
+    /* scrollbar-color: #9f3647  #181419; /*nuevo
+     scrollbar-width: thin;*/
+}
+
+/* animacion del logo */
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* personalizacion de scroll */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(23, 23, 23);
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9f3647;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:#9f3647;
+}
+
+
+/* etiqueta hr */
+hr{
+    border: 1px solid #9f3647;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
