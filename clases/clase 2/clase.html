@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Práctico HTML - Talento Tech</title>
+
+    <!-- Estilos básicos (opcional) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #f4f4f4;
+            padding: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+                <li><a href="#tablas">Tablas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección principal -->
+    <main>
+        <!-- Listas -->
+        <section id="inicio">
+            <h2>Tipos de Listas</h2>
+
+            <h3>Lista ordenada (pasos):</h3>
+            <ol>
+                <li>Abrir el editor de código</li>
+                <li>Escribir HTML</li>
+                <li>Guardar como .html</li>
+            </ol>
+
+            <h3>Lista de definiciones:</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Lenguaje de marcado para estructura</dd>
+                <dt>CSS</dt>
+                <dd>Lenguaje para estilos</dd>
+            </dl>
+        </section>
+
+        <!-- Multimedia -->
+        <section id="multimedia">
+            <h2>Elementos Multimedia</h2>
+
+            <h3>Imagen con ruta relativa:</h3>
+            <a href="https://www.w3schools.com/html/" target="_blank">
+                <img src="images/code-1076536_640.jpg" alt="Imagen de ejemplo" width="300">
+            </a>
+
+            <h3>Reproductor de video:</h3>
+            <video controls loop autoplay width="400">
+                <source src="video/203678-922748476_tiny.mp4" type="video/mp4">
+                <track default src="video/chapters.vtt" kind="subtitles" srclang="es" label="Español" />
+                <track default src="video/chaptersEnglish.vtt" kind="subtitles" srclang="en" label="Ingles" />
+            </video>
+            <audio controls>
+                <source src="video/audio-sample.mp3" />
+            </audio>
+        </section>
+
+        <!-- Tablas -->
+        <section id="tablas">
+            <h2>Ejemplo de Tabla</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laptop</td>
+                        <td>$1200</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>$20</td>
+                        <td>50</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2023 Talento Tech - Ejemplo práctico</p>
+        <!-- Enlace con ruta absoluta -->
+        <a href="https://github.com/miguelDocente/comision25020_FrontEnd_JS.git" target="_blank">Visita nuestro
+            GitHub</a>
+    </footer>
+</body>
+
+</html>
