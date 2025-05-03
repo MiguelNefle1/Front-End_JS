@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Avanzado</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f8f9fa;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap; /* permite que los ítems pasen a la siguiente línea */
+      justify-content: space-between;
+      align-content: space-around; /* espacio entre filas (cuando hay wrap) */
+      gap: 20px;
+      height: 400px;
+      padding: 20px;
+      border: 3px dashed #555;
+      background-color: #e0f7fa;
+    }
+
+    .item {
+      background-color: #0077cc;
+      color: white;
+      font-size: 1.2rem;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      min-width: 100px;
+    }
+
+    /* Ejemplo de order */
+    .item1 {
+      order: 3; /* aparece último */
+    }
+
+    .item2 {
+      order: 1; /* aparece primero */
+    }
+
+    .item3 {
+      order: 2; /* aparece segundo */
+    }
+
+    /* Ejemplo de align-self individual */
+    .item4 {
+      align-self: flex-end;
+    }
+
+    /* Ejemplo de crecimiento y reducción */
+    .item5 {
+      flex-grow: 2; /* ocupa más espacio */
+      flex-shrink: 1;
+      flex-basis: 150px;
+    }
+
+    /* Usando shorthand flex */
+    .item6 {
+      flex: 1 0 120px; /* grow, shrink, basis */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Demostración avanzada de Flexbox</h1>
+
+  <div class="contenedor">
+    <div class="item item1">Orden 3</div>
+    <div class="item item2">Orden 1</div>
+    <div class="item item3">Orden 2</div>
+    <div class="item item4">Align Self</div>
+    <div class="item item5">Grow x2</div>
+    <div class="item item6">Flex shorthand</div>
+  </div>
+
+</body>
+</html>

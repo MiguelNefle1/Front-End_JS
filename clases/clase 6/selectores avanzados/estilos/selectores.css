@@ -1,0 +1,63 @@
+/* El espacio entre los selectores en CSS indica una relación de descendencia */
+/* selector de descendiente */
+
+/* .descendiente ul li {
+    list-style-type: none;
+    border: 1px solid red;
+    border-radius: 5px;
+} */
+
+.descendiente ul {
+    padding-left: 20px;
+}
+
+.descendiente {
+    ul li {
+        /* quitar estilo de lista */
+        list-style-type: none;
+        /* Rojo más suave */
+        border: 1px solid #ff5e5e;
+        /* Fondo suave */
+        background-color: #ffecec;
+        /* Separación entre elementos */
+        margin: 8px 0;
+        /* Espaciado interno */
+        padding: 8px 12px;
+        /* estilo de bordes */
+        border-radius: 8px;
+        /* Fuente */
+        font-family: Arial, sans-serif;
+    }
+}
+
+
+/* agrupamiento de selectores */
+.agrupacion p,
+.agrupacion span {
+    color: blue;
+}
+
+
+/* selector de hijo directo */
+.hijo>div,
+.hijo>p,
+.hijo>span {
+    border: 1px solid black;
+}
+
+/* selector de hermano adyacente */
+.adyacente p+span {
+    color: red;
+}
+
+/*selector de general de hermanos */
+.general-hermanos h2~p {
+    font-style: italic;
+    font-size: 18px;
+    background-color: aqua;
+}
+
+/*  pseudoclase */
+.pseudo-class:hover {
+    background-color: yellow;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores Avanzados CSS</title>
+    <link rel="stylesheet" href="estilos/selectores.css"> <!-- Enlaza tu archivo de estilos CSS -->
+</head>
+
+<body>
+    <!-- Ejemplo de selector de descendiente -->
+    <div class="descendiente">
+        <ul>
+            <li>Elemento de lista 1</li>
+            <li>Elemento de lista 2
+                <ul>
+                    <li>Subelemento de lista 1</li>
+                    <li>Subelemento de lista 2</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Ejemplo de agrupación de selectores -->
+    <div class="agrupacion">
+        <h1>Este es un titulo dentro de la clase agrupacion</h1>
+        <p>Este es un párrafo dentro de un contenedor con la clase "agrupacion"</p>
+        <span>Este es un span dentro del mismo contenedor.</span>
+    </div>
+
+
+    <!-- Ejemplo de selector de hijo directo -->
+    <div class="hijo">
+        <div>Este es un div dentro del contenedor principal.</div>
+        <p>Este es un párrafo dentro del contenedor principal.</p>
+        <span>Este es un span dentro del contenedor principal.</span>
+    </div>
+    <!-- Ejemplo de selector de hermano adyacente -->
+    <div class="adyacente">
+        <p>Párrafo 1</p>
+        <p>Párrafo 2</p>
+        <span>Span 1</span>
+        <span>Span 2</span>
+    </div>
+
+    <!-- Ejemplo de selector de general de hermanos -->
+    <div class="general-hermanos">
+        <h2>Encabezado 1</h2>
+        <p>Párrafo 1</p>
+        <p>Párrafo 2</p>
+        <h2>Encabezado 2</h2>
+        <p>Párrafo 3</p>
+        <p>Párrafo 4</p>
+    </div>
+    <div>
+        <h2>Encabezado 3</h2>
+        <p>Parrafo 5</p>
+    </div>
+    <!-- Ejemplo de pseudoclase -->
+    <button class="pseudo-class">Haz clic aquí</button>
+
+
+</body>
+
+</html>

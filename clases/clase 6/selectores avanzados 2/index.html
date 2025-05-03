@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores Avanzados CSS</title>
+    <link rel="stylesheet" href="estilos/selectores.css">
+</head>
+
+<body>
+    <h1>Selectores Avanzados CSS</h1>
+    <p class="descripcion">Ejemplos prácticos de los principales selectores combinados en CSS</p>
+
+    <!-- Ejemplo de selector de descendiente -->
+    <div class="descendiente">
+        <h2>1. Selector de Descendiente (espacio)</h2>
+        <p class="explicacion">Selecciona <strong>todos los elementos</strong> que son descendientes del primer selector, sin importar el nivel de anidación.</p>
+        <code>/* Sintaxis: */ .descendiente ul li { ... }</code>
+        <ul>
+            <li>Elemento de lista 1</li>
+            <li>Elemento de lista 2
+                <ul>
+                    <li>Subelemento de lista 1</li>
+                    <li>Subelemento de lista 2</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Ejemplo de agrupación de selectores -->
+    <div class="agrupacion">
+        <h2>2. Agrupación de Selectores (coma)</h2>
+        <p class="explicacion">Permite aplicar el mismo estilo a <strong>múltiples selectores</strong> al mismo tiempo.</p>
+        <code>/* Sintaxis: */ .agrupacion h1, .agrupacion p, .agrupacion span { ... }</code>
+        <h1>Este es un título dentro de la clase agrupacion</h1>
+        <p>Este es un párrafo dentro de un contenedor con la clase "agrupacion"</p>
+        <span>Este es un span dentro del mismo contenedor.</span>
+    </div>
+
+    <!-- Ejemplo de selector de hijo directo -->
+    <div class="hijo">
+        <h2>3. Selector de Hijo Directo (>)</h2>
+        <p class="explicacion">Selecciona <strong>únicamente los elementos</strong> que son hijos directos (primer nivel).</p>
+        <code>/* Sintaxis: */ .hijo > div, .hijo > p, .hijo > span { ... }</code>
+        <div>Este es un div hijo directo del contenedor principal.</div>
+        <p>Este es un párrafo hijo directo del contenedor principal.</p>
+        <span>Este es un span hijo directo del contenedor principal.</span>
+        <div>
+            Otro div hijo directo que contiene:
+            <p>Este párrafo NO es hijo directo (está dentro de un div)</p>
+        </div>
+    </div>
+
+    <!-- Ejemplo de selector de hermano adyacente -->
+    <div class="adyacente">
+        <h2>4. Selector de Hermano Adyacente (+)</h2>
+        <p class="explicacion">Selecciona <strong>solamente el elemento</strong> que viene inmediatamente después del primer selector.</p>
+        <code>/* Sintaxis: */ .adyacente p + span { ... } y .adyacente p + p { ... }</code>
+        <p>Párrafo 1</p>
+        <p>Párrafo 2 (hermano adyacente de otro párrafo)</p>
+        <span>Span 1 (hermano adyacente de un párrafo)</span>
+        <span>Span 2 (NO es hermano adyacente de un párrafo)</span>
+    </div>
+
+    <!-- Ejemplo de selector general de hermanos -->
+    <div class="general-hermanos">
+        <h2>5. Selector General de Hermanos (~)</h2>
+        <p class="explicacion">Selecciona <strong>todos los elementos</strong> que son hermanos posteriores al primer selector.</p>
+        <code>/* Sintaxis: */ .general-hermanos h2 ~ p { ... }</code>
+        <h2>Encabezado 1</h2>
+        <p>Párrafo 1 (afectado, hermano de h2)</p>
+        <p>Párrafo 2 (afectado, hermano de h2)</p>
+        <h2>Encabezado 2</h2>
+        <p>Párrafo 3 (afectado, hermano de h2)</p>
+        <p>Párrafo 4 (afectado, hermano de h2)</p>
+    </div>
+
+    <div>
+        <h2>¡Este encabezado está fuera del ejemplo anterior!</h2>
+        <p>Este párrafo NO es afectado por el selector general de hermanos</p>
+    </div>
+
+    <!-- Ejemplo de pseudoclase -->
+    <div class="pseudo-ejemplo">
+        <h2>6. Pseudoclases</h2>
+        <p class="explicacion">Seleccionan elementos en <strong>estados específicos</strong> como hover, active, focus, etc.</p>
+        <code>/* Sintaxis: */ .pseudo-class:hover { ... }</code>
+        <button class="pseudo-class">Haz clic aquí (o pasa el cursor)</button>
+    </div>
+
+</body>
+
+</html>

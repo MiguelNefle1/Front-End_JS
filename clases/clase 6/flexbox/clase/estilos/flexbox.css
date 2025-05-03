@@ -1,0 +1,807 @@
+/* ========== ESTILOS GENERALES ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== 3. FLEX WRAP ========== */
+
+/* flex-wrap: nowrap (default) */
+.flex-wrap-nowrap {
+    display: flex;
+    /* flex-wrap: nowrap; es el valor por defecto */
+    /* Los elementos se mantienen en una sola línea, pueden comprimirse o desbordar */
+    background-color: #f1f3f5;
+    width: 100%;
+}
+
+.flex-wrap-nowrap .flex-item {
+    width: 80px; /* Ancho fijo para demostrar el comportamiento */
+    min-width: 80px; /* Forzar un ancho mínimo para que se vea el comportamiento */
+    flex-shrink: 0; /* Impide que los elementos se compriman (para mostrar el desbordamiento) */
+}
+
+/* flex-wrap: wrap */
+.flex-wrap-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    /* Los elementos se distribuyen en múltiples líneas si no caben en una sola */
+    background-color: #f1f3f5;
+    width: 100%;
+}
+
+.flex-wrap-wrap .flex-item {
+    width: 80px;
+    min-width: 80px;
+    margin: 5px;
+}
+
+/* flex-wrap: wrap-reverse */
+.flex-wrap-wrap-reverse {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    /* Similar a wrap, pero las líneas se apilan de abajo hacia arriba */
+    background-color: #f1f3f5;
+    width: 100%;
+}
+
+.flex-wrap-wrap-reverse .flex-item {
+    width: 80px;
+    min-width: 80px;
+    margin: 5px;
+}
+
+/* ========== 4. JUSTIFY-CONTENT ========== */
+/* justify-content controla la alineación en el eje principal (horizontal en row, vertical en column) */
+
+/* justify-content: flex-start (default) */
+.justify-flex-start {
+    display: flex;
+    /* justify-content: flex-start; es el valor por defecto */
+    /* Los elementos se alinean al inicio del contenedor */
+    background-color: #f1f3f5;
+    height: 80px;
+}
+
+/* justify-content: flex-end */
+.justify-flex-end {
+    display: flex;
+    justify-content: flex-end;
+    /* Los elementos se alinean al final del contenedor */
+    background-color: #f1f3f5;
+    height: 80px;
+}
+
+/* justify-content: center */
+.justify-center {
+    display: flex;
+    justify-content: center;
+    /* Los elementos se centran en el eje principal */
+    background-color: #f1f3f5;
+    height: 80px;
+}
+
+/* justify-content: space-between */
+.justify-space-between {
+    display: flex;
+    justify-content: space-between;
+    /* Distribuye los elementos con el primer elemento al inicio, 
+       el último al final y espacio igual entre ellos */
+    background-color: #f1f3f5;
+    height: 80px;
+}
+
+/* justify-content: space-around */
+.justify-space-around {
+    display: flex;
+    justify-content: space-around;
+    /* Distribuye los elementos con espacio igual alrededor de cada uno,
+       resultando en espacio doble entre elementos y la mitad al inicio y final */
+    background-color: #f1f3f5;
+    height: 80px;
+}
+
+/* justify-content: space-evenly */
+.justify-space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    /* Distribuye los elementos con espacio exactamente igual entre ellos,
+       incluyendo el espacio al inicio y final del contenedor */
+    background-color: #f1f3f5;
+    height: 80px;
+}
+
+/* ========== 5. ALIGN-ITEMS ========== */
+/* align-items controla la alineación en el eje transversal (vertical en row, horizontal en column) */
+
+/* Estilos para ítems de diferentes tamaños para demostrar align-items */
+.flex-item.small {
+    height: 30px;
+    line-height: 10px;
+}
+.flex-item.large {
+    height: 70px;
+    line-height: 50px;
+}
+
+/* align-items: stretch (default) */
+.align-stretch {
+    display: flex;
+    /* align-items: stretch; es el valor por defecto */
+    /* Los elementos se estiran para ocupar todo el espacio disponible en el eje transversal */
+    background-color: #f1f3f5;
+    height: 100px;
+}
+
+/* align-items: flex-start */
+.align-flex-start {
+    display: flex;
+    align-items: flex-start;
+    /* Los elementos se alinean al inicio del eje transversal */
+    background-color: #f1f3f5;
+    height: 100px;
+}
+
+/* align-items: flex-end */
+.align-flex-end {
+    display: flex;
+    align-items: flex-end;
+    /* Los elementos se alinean al final del eje transversal */
+    background-color: #f1f3f5;
+    height: 100px;
+}
+
+/* align-items: center */
+.align-center {
+    display: flex;
+    align-items: center;
+    /* Los elementos se centran en el eje transversal */
+    background-color: #f1f3f5;
+    height: 100px;
+}
+
+/* align-items: baseline */
+.align-baseline {
+    display: flex;
+    align-items: baseline;
+    /* Los elementos se alinean según la línea base del texto */
+    background-color: #f1f3f5;
+    height: 100px;
+}
+
+/* ========== 6. ALIGN-CONTENT ========== */
+/* align-content alinea las líneas de elementos flex cuando hay varias líneas 
+   (solo funciona cuando flex-wrap es wrap o wrap-reverse y hay espacio extra) */
+
+/* align-content: stretch (default) */
+.content-stretch {
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: stretch; es el valor por defecto */
+    /* Las líneas se estiran ocupando todo el espacio disponible */
+    background-color: #f1f3f5;
+    height: 200px;
+}
+
+.content-stretch .flex-item {
+    width: 30%;
+    margin: 1%;
+}
+
+/* align-content: flex-start */
+.content-flex-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    /* Las líneas se agrupan al inicio del contenedor */
+    background-color: #f1f3f5;
+    height: 200px;
+}
+
+.content-flex-start .flex-item {
+    width: 30%;
+    margin: 1%;
+}
+
+/* align-content: flex-end */
+.content-flex-end {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    /* Las líneas se agrupan al final del contenedor */
+    background-color: #f1f3f5;
+    height: 200px;
+}
+
+.content-flex-end .flex-item {
+    width: 30%;
+    margin: 1%;
+}
+
+/* align-content: center */
+.content-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    /* Las líneas se centran en el contenedor */
+    background-color: #f1f3f5;
+    height: 200px;
+}
+
+.content-center .flex-item {
+    width: 30%;
+    margin: 1%;
+}
+
+/* align-content: space-between */
+.content-space-between {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    /* Las líneas se distribuyen con espacio entre ellas */
+    background-color: #f1f3f5;
+    height: 200px;
+}
+
+.content-space-between .flex-item {
+    width: 30%;
+    margin: 1%;
+}
+
+/* align-content: space-around */
+.content-space-around {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    /* Las líneas se distribuyen con espacio alrededor de ellas */
+    background-color: #f1f3f5;
+    height: 200px;
+}
+
+.content-space-around .flex-item {
+    width: 30%;
+    margin: 1%;
+}
+
+/* ========== 7. ALIGN-SELF ========== */
+/* align-self permite sobrescribir la alineación establecida por align-items para elementos individuales */
+
+.align-self-demo {
+    display: flex;
+    /* Por defecto align-items es stretch */
+    background-color: #f1f3f5;
+    height: 150px;
+}
+
+.self-start {
+    align-self: flex-start;
+    /* Este elemento se alinea al inicio del eje transversal */
+}
+
+.self-center {
+    align-self: center;
+    /* Este elemento se alinea al centro del eje transversal */
+}
+
+.self-end {
+    align-self: flex-end;
+    /* Este elemento se alinea al final del eje transversal */
+}
+
+.self-stretch {
+    align-self: stretch;
+    /* Este elemento se estira para ocupar todo el eje transversal */
+}
+
+/* ========== 8. GAP Y ORDER ========== */
+
+/* gap: Espaciado entre elementos */
+.gap-demo {
+    display: flex;
+    /* gap define el espacio entre los flex items */
+    gap: 20px;
+    /* También se puede especificar row-gap y column-gap por separado */
+    background-color: #f1f3f5;
+    padding: 15px;
+}
+
+/* order: Cambio del orden visual */
+.order-demo {
+    display: flex;
+    background-color: #f1f3f5;
+    padding: 15px;
+}
+
+/* La propiedad order permite reorganizar los elementos visualmente sin cambiar el HTML */
+/* Por defecto, todos los elementos tienen order: 0 */
+.order-1 {
+    order: 1; /* Aparecerá de primero */
+    background-color: #c5f6fa;
+}
+
+.order-2 {
+    order: 2; /* Aparecerá de segundo */
+    background-color: #99e9f2;
+}
+
+.order-3 {
+    order: 3; /* Aparecerá de tercero */
+    background-color: #66d9e8;
+}
+
+.order-4 {
+    order: 4; /* Aparecerá de último */
+    background-color: #3bc9db;
+}
+
+/* ========== 9. FLEX-GROW Y FLEX-SHRINK ========== */
+
+/* flex-grow: Factor de crecimiento */
+.flex-grow-demo {
+    display: flex;
+    background-color: #f1f3f5;
+    padding: 15px;
+}
+
+.grow-1 {
+    flex-grow: 1;
+    /* Crecerá 1 unidad respecto a los demás */
+    background-color: #d0bfff;
+}
+
+.grow-2 {
+    flex-grow: 2;
+    /* Crecerá 2 unidades respecto a los demás (el doble que grow-1) */
+    background-color: #b197fc;
+}
+
+.grow-3 {
+    flex-grow: 3;
+    /* Crecerá 3 unidades respecto a los demás (el triple que grow-1) */
+    background-color: #9775fa;
+}
+
+/* flex-shrink: Factor de reducción */
+.flex-shrink-demo {
+    display: flex;
+    background-color: #f1f3f5;
+    padding: 15px;
+    width: 100%; /* Contenedor con ancho limitado */
+}
+
+.flex-shrink-demo .flex-item {
+    width: 200px; /* Ancho base para todos, mayor que el disponible para forzar la reducción */
+}
+
+.shrink-1 {
+    flex-shrink: 1;
+    /* Se reducirá 1 unidad respecto a los demás (valor por defecto) */
+    background-color: #ffc9c9;
+}
+
+.shrink-2 {
+    flex-shrink: 2;
+    /* Se reducirá 2 unidades respecto a los demás (el doble que shrink-1) */
+    background-color: #ffa8a8;
+}
+
+.shrink-3 {
+    flex-shrink: 3;
+    /* Se reducirá 3 unidades respecto a los demás (el triple que shrink-1) */
+    background-color: #ff8787;
+}
+
+/* ========== 10. FLEX-BASIS Y SHORTHAND FLEX ========== */
+
+/* flex-basis: Tamaño inicial */
+.flex-basis-demo {
+    display: flex;
+    background-color: #f1f3f5;
+    padding: 15px;
+}
+
+.basis-100 {
+    flex-basis: 100px;
+    /* Tamaño inicial de 100px antes de crecer o reducirse */
+    background-color: #c3fae8;
+}
+
+.basis-200 {
+    flex-basis: 200px;
+    /* Tamaño inicial de 200px antes de crecer o reducirse */
+    background-color: #96f2d7;
+}
+
+.basis-auto {
+    flex-basis: auto;
+    /* Tamaño inicial basado en el contenido o width/height */
+    background-color: #63e6be;
+}
+
+/* Shorthand flex */
+.flex-shorthand-demo {
+    display: flex;
+    background-color: #f1f3f5;
+    padding: 15px;
+}
+
+.flex-1-1-auto {
+    flex: 1 1 auto;
+    /* flex-grow: 1, flex-shrink: 1, flex-basis: auto */
+    /* Crecerá, se reducirá y empezará con el tamaño de su contenido */
+    background-color: #e5dbff;
+}
+
+.flex-0-1-auto {
+    flex: 0 1 auto;
+    /* flex-grow: 0, flex-shrink: 1, flex-basis: auto */
+    /* No crecerá, se reducirá y empezará con el tamaño de su contenido */
+    background-color: #d0bfff;
+}
+
+.flex-2-0-200px {
+    flex: 2 0 200px;
+    /* flex-grow: 2, flex-shrink: 0, flex-basis: 200px */
+    /* Crecerá más que otros elementos, no se reducirá y empezará con 200px */
+    background-color: #b197fc;
+}
+
+/* Valores predefinidos de flex */
+.flex-predef-demo {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f1f3f5;
+    padding: 15px;
+    gap: 10px;
+}
+
+.flex-initial {
+    flex: initial;
+    /* Equivalente a flex: 0 1 auto */
+    /* No crecerá, se reducirá si es necesario, tamaño inicial basado en contenido */
+    background-color: #ffd8a8;
+    width: 200px; /* Para demostrar que puede reducirse */
+}
+
+.flex-auto {
+    flex: auto;
+    /* Equivalente a flex: 1 1 auto */
+    /* Crecerá, se reducirá si es necesario, tamaño inicial basado en contenido */
+    background-color: #ffc078;
+}
+
+.flex-none {
+    flex: none;
+    /* Equivalente a flex: 0 0 auto */
+    /* No crecerá, no se reducirá, tamaño inicial basado en contenido */
+    background-color: #ffa94d;
+    width: 200px; /* Para demostrar que no se reducirá */
+}
+
+.flex-1 {
+    flex: 1;
+    /* Equivalente a flex: 1 1 0% */
+    /* Crecerá, se reducirá si es necesario, tamaño inicial 0 */
+    background-color: #ff922b;
+}
+
+/* ========== 11. EJEMPLO PRÁCTICO ========== */
+
+.practical-demo {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header con logo y navegación */
+.practical-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #343a40;
+    color: white;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #495057;
+}
+
+/* Main content con sidebar y contenido principal */
+.practical-main {
+    display: flex;
+    flex: 1; /* Toma todo el espacio disponible */
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #e9ecef;
+    width: 200px;
+}
+
+.sidebar-item {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar-item:hover {
+    background-color: #ced4da;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    flex: 1; /* Toma el resto del espacio disponible */
+}
+
+.card {
+    flex: 1 1 200px; /* Crece, se reduce, tamaño base 200px */
+    min-height: 150px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer con 3 columnas */
+.practical-footer {
+    display: flex;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+}
+
+.footer-col {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Footer de la página */
+.page-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin: 30px 0 15px;
+}
+
+h3 {
+    color: #3a4750;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    color: #6c757d;
+    font-size: 1.1em;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.example-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.subsection {
+    flex: 1 1 300px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.explicacion {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    color: #495057;
+}
+
+.demo {
+    border: 2px dashed #dee2e6;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: white;
+    position: relative;
+}
+
+code {
+    display: block;
+    background-color: #f1f3f5;
+    padding: 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    margin: 10px 0;
+    color: #e83e8c;
+}
+
+.flex-item {
+    background-color: #a5d8ff;
+    color: #1c7ed6;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== 1. VALORES DE DISPLAY ========== */
+
+/* Display: Block */
+/* Por defecto, los elementos div son block, pero lo especificamos explícitamente para el ejemplo */
+.block-item {
+    display: block;
+    /* Elementos block ocupan todo el ancho disponible por defecto */
+    width: 100%;
+    /* Podemos especificar altura */
+    height: 50px;
+    margin-bottom: 10px;
+    background-color: #ffd8a8;
+    color: #e8590c;
+}
+
+/* Display: Inline */
+.inline-demo {
+    background-color: #f8f9fa;
+    padding: 15px;
+    /* Añadimos líneas para mostrar la anchura total disponible */
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.inline-item {
+    display: inline;
+    /* IMPORTANTE: width y height NO tienen efecto en elementos inline */
+    width: 100px; /* Esto será ignorado */
+    height: 100px; /* Esto será ignorado */
+    padding: 10px;
+    margin: 10px; /* Los márgenes horizontales funcionan, los verticales son ignorados */
+    background-color: #c3fae8;
+    color: #0ca678;
+}
+
+/* Display: Inline-Block */
+.inline-block-demo {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.inline-block-item {
+    display: inline-block;
+    /* A diferencia de inline, aquí SÍ podemos especificar ancho y alto */
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #d3f9d8;
+    color: #2b8a3e;
+}
+
+/* Display: Flex */
+.flex-demo {
+    /* Esta es la propiedad clave que convierte un contenedor en flexible */
+    display: flex;
+    /* Por defecto, los elementos se alinean en fila (flex-direction: row) */
+    background-color: #f8f9fa;
+    padding: 15px;
+    gap: 10px; /* Espacio entre flex items */
+}
+
+.flex-demo .flex-item {
+    /* Los elementos hijo de un contenedor flex son "flex items" */
+    flex: 1; /* Shorthand para flex-grow: 1, flex-shrink: 1, flex-basis: 0% */
+    /* Esto hace que todos los elementos crezcan por igual para ocupar el espacio disponible */
+}
+
+/* ========== 2. FLEX DIRECTION ========== */
+
+/* flex-direction: row (default) */
+.flex-direction-row {
+    display: flex;
+    /* flex-direction: row; es el valor por defecto (no necesitamos especificarlo) */
+    /* Los elementos se disponen de izquierda a derecha */
+    background-color: #f1f3f5;
+}
+
+/* flex-direction: row-reverse */
+.flex-direction-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Los elementos se disponen de derecha a izquierda */
+    background-color: #f1f3f5;
+}
+
+/* flex-direction: column */
+.flex-direction-column {
+    display: flex;
+    flex-direction: column;
+    /* Los elementos se disponen de arriba a abajo */
+    background-color: #f1f3f5;
+    height: 250px; /* Añadimos altura para que se vea mejor el efecto */
+}
+
+/* flex-direction: column-reverse */
+.flex-direction-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    /* Los elementos se disponen de abajo a arriba */
+    background-color: #f1f3f5;
+    height: 250px; /* Añadimos altura para que se vea mejor el efecto */
+}

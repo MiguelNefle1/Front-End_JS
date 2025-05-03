@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Diseño Web con Position CSS</title>
+</head>
+<body>
+    <!-- Header con position: fixed -->
+    <header class="header">
+        <h1>Tienda de Tecnología</h1>
+        <div class="position-indicator fixed-indicator">position: fixed</div>
+    </header>
+
+    <!-- Navegación con position: sticky -->
+    <nav class="navigation">
+        <div class="position-indicator sticky-indicator">position: sticky</div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#ofertas">Ofertas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section id="inicio" class="featured-section">
+            <h2>Ofertas destacadas</h2>
+            <p>Descubre nuestras mejores ofertas en tecnología para este mes.</p>
+            
+            <!-- Tarjeta destacada con position: absolute -->
+            <div class="featured-card">
+                <div class="position-indicator absolute-indicator-1">position: absolute</div>
+                <div class="featured-badge">
+                    <div class="position-indicator absolute-indicator-2">position: absolute</div>
+                    ¡OFERTA!
+                </div>
+                <h3>Smartphone Ultra 9</h3>
+                <p>50% de descuento</p>
+                <p>¡Solo hasta agotar existencias!</p>
+            </div>
+        </section>
+
+        <h2 id="productos">Nuestros productos</h2>
+        
+        <!-- Productos con position: static (default) -->
+        <div class="products">
+            <div class="product">
+                <img src="/api/placeholder/250/150" alt="Laptop">
+                <div class="product-badge">Nuevo</div>
+                <div class="product-content">
+                    <h3>Laptop Pro</h3>
+                    <p>$1299.99</p>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="/api/placeholder/250/150" alt="Tablet">
+                <div class="product-badge">Oferta</div>
+                <div class="product-content">
+                    <h3>Tablet Premium</h3>
+                    <p>$499.99</p>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="/api/placeholder/250/150" alt="Smartwatch">
+                <div class="product-content">
+                    <h3>Smartwatch Fitness</h3>
+                    <p>$199.99</p>
+                </div>
+            </div>
+            
+            <div class="product">
+                <img src="/api/placeholder/250/150" alt="Auriculares">
+                <div class="product-badge">-20%</div>
+                <div class="product-content">
+                    <h3>Auriculares Bluetooth</h3>
+                    <p>$129.99</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ofertas" class="notification">
+            ¡Oferta especial disponible! Haz clic para ver más detalles.
+        </div>
+
+        <!-- Botón flotante con position: fixed -->
+        <div class="floating-button" id="chatButton">
+            <span>💬</span>
+        </div>
+    </main>
+
+    <!-- Footer con position: relative -->
+    <footer class="footer" id="contacto">
+        <a href="#inicio" class="back-to-top">Volver arriba</a>
+        <p>Tienda de Tecnología &copy; 2025</p>
+        <p>Teléfono: 123-456-7890 | Email: info@tiendatecnologia.com</p>
+    </footer>
+
+    <!-- Popup con position: fixed -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <button class="popup-close" id="closePopup">×</button>
+        <h3>Chatea con nosotros</h3>
+        <p>Estamos disponibles para responder tus preguntas.</p>
+        <p>Escríbenos y te responderemos lo más pronto posible.</p>
+    </div>
+
+
+</body>
+</html>

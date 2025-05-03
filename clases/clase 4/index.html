@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo CSS - Clase 4</title>
+    
+    <!-- CSS interno como ejemplo -->
+    <style>
+        /* Esto es un CSS interno */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            color: purple; /* Este color será sobrescrito por el CSS externo */
+        }
+    </style>
+    
+    <!-- Enlace al CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="titulo-principal">Mi Primera Página con CSS</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="seccion-principal">
+            <h2>Bienvenidos a CSS</h2>
+            <p>CSS nos permite dar <span style="color: red; font-weight: bold;">estilo</span> a nuestras páginas web.</p>
+            <p class="destacado">Esta es una clase sobre los fundamentos de CSS.</p>
+            
+            <div class="caja">
+                <h3>Tipos de selectores</h3>
+                <ul>
+                    <li>Selector universal (*)</li>
+                    <li>Selector de etiqueta (p, h1, div)</li>
+                    <li>Selector de clase (.nombre-clase)</li>
+                    <li>Selector de ID (#nombre-id)</li>
+                </ul>
+            </div>
+            
+            <div class="caja ancho">
+                <h3>Propiedades básicas</h3>
+                <p>Veremos colores, tamaños y unidades de medida.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025 Clase de CSS. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

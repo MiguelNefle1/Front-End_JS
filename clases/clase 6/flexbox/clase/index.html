@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de Flexbox</title>
+    <link rel="stylesheet" href="estilos/flexbox.css">
+</head>
+
+<body>
+    <header>
+        <h1>Guía Completa de Flexbox</h1>
+        <p class="descripcion">Aprende a utilizar las propiedades de Flexbox para crear diseños flexibles y responsivos</p>
+    </header>
+
+    <!-- SECCIÓN 1: VALORES DEL DISPLAY -->
+    <section id="display-values">
+        <h2>1. Valores de Display</h2>
+        <div class="example-container">
+            <div class="subsection">
+                <h3>Display: Block</h3>
+                <p class="explicacion">Ocupa todo el ancho disponible y crea saltos de línea antes y después.</p>
+                <div class="demo block-demo">
+                    <div class="block-item">Elemento Block 1</div>
+                    <div class="block-item">Elemento Block 2</div>
+                    <div class="block-item">Elemento Block 3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Display: Inline</h3>
+                <p class="explicacion">Se alinea en línea y ocupa solo el espacio necesario. No respeta ancho/alto.</p>
+                <div class="demo inline-demo">
+                    <div class="inline-item">Elemento Inline 1</div>
+                    <div class="inline-item">Elemento Inline 2</div>
+                    <div class="inline-item">Elemento Inline 3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Display: Inline-Block</h3>
+                <p class="explicacion">Se alinea en línea pero respeta propiedades de ancho y alto como un bloque.</p>
+                <div class="demo inline-block-demo">
+                    <div class="inline-block-item">Inline-Block 1</div>
+                    <div class="inline-block-item">Inline-Block 2</div>
+                    <div class="inline-block-item">Inline-Block 3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Display: Flex</h3>
+                <p class="explicacion">Convierte el contenedor en un contexto flex. Sus hijos se vuelven flex items.</p>
+                <div class="demo flex-demo">
+                    <div class="flex-item">Flex 1</div>
+                    <div class="flex-item">Flex 2</div>
+                    <div class="flex-item">Flex 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: FLEX DIRECTION -->
+    <section id="flex-direction">
+        <h2>2. Propiedad flex-direction</h2>
+        <p class="explicacion">Define la dirección principal del contenedor flex.</p>
+
+        <div class="example-container">
+            <div class="subsection">
+                <h3>flex-direction: row (default)</h3>
+                <div class="demo flex-direction-row">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>flex-direction: row-reverse</h3>
+                <div class="demo flex-direction-row-reverse">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>flex-direction: column</h3>
+                <div class="demo flex-direction-column">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>flex-direction: column-reverse</h3>
+                <div class="demo flex-direction-column-reverse">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: FLEX WRAP -->
+    <section id="flex-wrap">
+        <h2>3. Propiedad flex-wrap</h2>
+        <p class="explicacion">Controla si los elementos flex pueden distribuirse en múltiples líneas.</p>
+
+        <div class="example-container">
+            <div class="subsection">
+                <h3>flex-wrap: nowrap (default)</h3>
+                <div class="demo flex-wrap-nowrap">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                    <div class="flex-item">7</div>
+                    <div class="flex-item">8</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>flex-wrap: wrap</h3>
+                <div class="demo flex-wrap-wrap">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                    <div class="flex-item">7</div>
+                    <div class="flex-item">8</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>flex-wrap: wrap-reverse</h3>
+                <div class="demo flex-wrap-wrap-reverse">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                    <div class="flex-item">7</div>
+                    <div class="flex-item">8</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: JUSTIFY-CONTENT -->
+    <section id="justify-content">
+        <h2>4. Propiedad justify-content</h2>
+        <p class="explicacion">Alinea los elementos flex a lo largo del eje principal (horizontalmente por defecto).</p>
+
+        <div class="example-container">
+            <div class="subsection">
+                <h3>justify-content: flex-start</h3>
+                <div class="demo justify-flex-start">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>justify-content: flex-end</h3>
+                <div class="demo justify-flex-end">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>justify-content: center</h3>
+                <div class="demo justify-center">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>justify-content: space-between</h3>
+                <div class="demo justify-space-between">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>justify-content: space-around</h3>
+                <div class="demo justify-space-around">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>justify-content: space-evenly</h3>
+                <div class="demo justify-space-evenly">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: ALIGN-ITEMS -->
+    <section id="align-items">
+        <h2>5. Propiedad align-items</h2>
+        <p class="explicacion">Alinea los elementos flex a lo largo del eje transversal (verticalmente por defecto).</p>
+
+        <div class="example-container">
+            <div class="subsection">
+                <h3>align-items: stretch (default)</h3>
+                <div class="demo align-stretch">
+                    <div class="flex-item small">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item large">3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>align-items: flex-start</h3>
+                <div class="demo align-flex-start">
+                    <div class="flex-item small">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item large">3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>align-items: flex-end</h3>
+                <div class="demo align-flex-end">
+                    <div class="flex-item small">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item large">3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>align-items: center</h3>
+                <div class="demo align-center">
+                    <div class="flex-item small">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item large">3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>align-items: baseline</h3>
+                <div class="demo align-baseline">
+                    <div class="flex-item small">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item large">3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: ALIGN-CONTENT -->
+    <section id="align-content">
+        <h2>6. Propiedad align-content</h2>
+        <p class="explicacion">Alinea las líneas de elementos flex cuando hay espacio extra en el eje transversal y hay múltiples líneas (requiere flex-wrap: wrap).</p>
+
+        <div class="example-container">
+            <div class="subsection">
+                <h3>align-content: stretch (default)</h3>
+                <div class="demo content-stretch">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>align-content: flex-start</h3>
+                <div class="demo content-flex-start">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>align-content: flex-end</h3>
+                <div class="demo content-flex-end">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>align-content: center</h3>
+                <div class="demo content-center">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>align-content: space-between</h3>
+                <div class="demo content-space-between">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>align-content: space-around</h3>
+                <div class="demo content-space-around">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                    <div class="flex-item">5</div>
+                    <div class="flex-item">6</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7: ALIGN-SELF -->
+    <section id="align-self">
+        <h2>7. Propiedad align-self</h2>
+        <p class="explicacion">Permite sobrescribir el valor de align-items para elementos flex individuales.</p>
+
+        <div class="example-container">
+            <div class="subsection">
+                <h3>align-self (valores diferentes)</h3>
+                <div class="demo align-self-demo">
+                    <div class="flex-item self-start">flex-start</div>
+                    <div class="flex-item self-center">center</div>
+                    <div class="flex-item self-end">flex-end</div>
+                    <div class="flex-item self-stretch">stretch</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 8: GAP Y ORDER -->
+    <section id="gap-order">
+        <h2>8. Propiedades gap y order</h2>
+
+        <div class="example-container">
+            <div class="subsection">
+                <h3>gap: Espaciado entre elementos</h3>
+                <p class="explicacion">Define el espacio entre elementos flex sin afectar los márgenes externos.</p>
+                <div class="demo gap-demo">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                    <div class="flex-item">4</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>order: Cambio del orden visual</h3>
+                <p class="explicacion">Permite cambiar el orden visual de los elementos sin modificar el HTML.</p>
+                <div class="demo order-demo">
+                    <div class="flex-item order-3">Orden: 3</div>
+                    <div class="flex-item order-1">Orden: 1</div>
+                    <div class="flex-item order-4">Orden: 4</div>
+                    <div class="flex-item order-2">Orden: 2</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 9: FLEX-GROW Y FLEX-SHRINK -->
+    <section id="grow-shrink">
+        <h2>9. Propiedades flex-grow y flex-shrink</h2>
+
+        <div class="example-container">
+            <div class="subsection">
+                <h3>flex-grow: Factor de crecimiento</h3>
+                <p class="explicacion">Define cuánto puede crecer un elemento respecto a los demás.</p>
+                <div class="demo flex-grow-demo">
+                    <div class="flex-item grow-1">grow: 1</div>
+                    <div class="flex-item grow-2">grow: 2</div>
+                    <div class="flex-item grow-3">grow: 3</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>flex-shrink: Factor de reducción</h3>
+                <p class="explicacion">Define cuánto puede reducirse un elemento cuando el espacio es insuficiente.</p>
+                <div class="demo flex-shrink-demo">
+                    <div class="flex-item shrink-1">shrink: 1</div>
+                    <div class="flex-item shrink-2">shrink: 2</div>
+                    <div class="flex-item shrink-3">shrink: 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 10: FLEX-BASIS Y SHORTHAND FLEX -->
+    <section id="basis-shorthand">
+        <h2>10. Propiedad flex-basis y shorthand flex</h2>
+
+        <div class="example-container">
+            <div class="subsection">
+                <h3>flex-basis: Tamaño inicial</h3>
+                <p class="explicacion">Define el tamaño inicial de un elemento antes de aplicar flex-grow o flex-shrink.</p>
+                <div class="demo flex-basis-demo">
+                    <div class="flex-item basis-100">basis: 100px</div>
+                    <div class="flex-item basis-200">basis: 200px</div>
+                    <div class="flex-item basis-auto">basis: auto</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Shorthand flex</h3>
+                <p class="explicacion">Combina flex-grow, flex-shrink y flex-basis en una sola propiedad.</p>
+                <div class="demo flex-shorthand-demo">
+                    <div class="flex-item flex-1-1-auto">flex: 1 1 auto</div>
+                    <div class="flex-item flex-0-1-auto">flex: 0 1 auto</div>
+                    <div class="flex-item flex-2-0-200px">flex: 2 0 200px</div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>Valores predefinidos de flex</h3>
+                <p class="explicacion">Algunos valores comunes de la propiedad shorthand flex.</p>
+                <div class="demo flex-predef-demo">
+                    <div class="flex-item flex-initial">flex: initial (0 1 auto)</div>
+                    <div class="flex-item flex-auto">flex: auto (1 1 auto)</div>
+                    <div class="flex-item flex-none">flex: none (0 0 auto)</div>
+                    <div class="flex-item flex-1">flex: 1 (1 1 0%)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 11: EJEMPLO PRÁCTICO -->
+    <section id="practical-example">
+        <h2>11. Ejemplo Práctico: Diseño Flexible</h2>
+        <p class="explicacion">Combinando todas las propiedades para crear un diseño flexible.</p>
+
+        <div class="example-container">
+            <div class="practical-demo">
+                <header class="practical-header">
+                    <div class="logo">Logo</div>
+                    <nav class="menu">
+                        <div class="menu-item">Inicio</div>
+                        <div class="menu-item">Productos</div>
+                        <div class="menu-item">Servicios</div>
+                        <div class="menu-item">Contacto</div>
+                    </nav>
+                </header>
+                <main class="practical-main">
+                    <aside class="sidebar">
+                        <div class="sidebar-item">Categoría 1</div>
+                        <div class="sidebar-item">Categoría 2</div>
+                        <div class="sidebar-item">Categoría 3</div>
+                    </aside>
+                    <section class="content">
+                        <article class="card">Contenido 1</article>
+                        <article class="card">Contenido 2</article>
+                        <article class="card">Contenido 3</article>
+                        <article class="card">Contenido 4</article>
+                    </section>
+                </main>
+                <footer class="practical-footer">
+                    <div class="footer-col">Columna 1</div>
+                    <div class="footer-col">Columna 2</div>
+                    <div class="footer-col">Columna 3</div>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer">
+        <p>Guía de Flexbox Nefle Miguel Angel - 2025</p>
+    </footer>
+</body>
+
+</html>

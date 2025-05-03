@@ -1,0 +1,181 @@
+/* ========== ESTILOS GENERALES ========== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+div {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+/* ========== SELECTOR DE DESCENDIENTE ========== */
+/* El selector de descendiente (espacio entre selectores) selecciona TODOS los elementos 
+   que son descendientes del elemento especificado, sin importar el nivel de anidación */
+
+.descendiente {
+    background-color: #f8f9fa;
+}
+
+.descendiente ul {
+    padding-left: 20px;
+}
+
+.descendiente ul li {
+    /* Selecciona TODOS los elementos <li> que están dentro de <ul> que a su vez están dentro de .descendiente */
+    list-style-type: none;
+    border: 1px solid #ff5e5e;
+    background-color: #ffecec;
+    margin: 8px 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.descendiente ul li:hover {
+    background-color: #ffe0e0;
+}
+
+/* ========== AGRUPAMIENTO DE SELECTORES ========== */
+/* La coma permite aplicar los mismos estilos a múltiples selectores diferentes */
+
+.agrupacion {
+    background-color: #e6f7ff;
+}
+
+.agrupacion h1,
+.agrupacion p,
+.agrupacion span {
+    /* Estos estilos se aplican a TODOS estos elementos dentro de .agrupacion */
+    color: #0066cc;
+    margin: 8px 0;
+    padding: 5px;
+}
+
+.agrupacion h1 {
+    /* Estilos específicos solo para h1 */
+    border-bottom: 2px dashed #0066cc;
+}
+
+/* ========== SELECTOR DE HIJO DIRECTO ========== */
+/* El signo > selecciona ÚNICAMENTE elementos que son hijos directos (primer nivel) */
+
+.hijo {
+    background-color: #f0f4f8;
+}
+
+.hijo > div,
+.hijo > p,
+.hijo > span {
+    /* Selecciona SOLO los elementos que son hijos directos de .hijo */
+    border: 2px solid #2c3e50;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+    transition: transform 0.2s;
+}
+
+.hijo > div:hover,
+.hijo > p:hover,
+.hijo > span:hover {
+    transform: translateX(10px);
+}
+
+/* ========== SELECTOR DE HERMANO ADYACENTE ========== */
+/* El signo + selecciona EL elemento que viene inmediatamente después del primero */
+
+.adyacente {
+    background-color: #fff5f5;
+}
+
+.adyacente p {
+    background-color: #f8d7da;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.adyacente p + p {
+    /* Selecciona SOLO los <p> que vienen inmediatamente después de otro <p> */
+    border-left: 4px solid #dc3545;
+    margin-top: -4px;
+}
+
+.adyacente p + span {
+    /* Selecciona SOLO los <span> que vienen inmediatamente después de un <p> */
+    color: #dc3545;
+    font-weight: bold;
+    display: block;
+    padding: 5px;
+    margin: 5px 0;
+    border-bottom: 1px dotted #dc3545;
+}
+
+/* ========== SELECTOR GENERAL DE HERMANOS ========== */
+/* El signo ~ selecciona TODOS los elementos que son hermanos y vienen después del primero */
+
+.general-hermanos {
+    background-color: #e3f2fd;
+}
+
+.general-hermanos h2 {
+    color: #0d47a1;
+    border-bottom: 2px solid #0d47a1;
+}
+
+.general-hermanos h2 ~ p {
+    /* Selecciona TODOS los <p> que son hermanos de <h2> y aparecen después de él */
+    font-style: italic;
+    font-size: 16px;
+    background-color: #bbdefb;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 8px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.general-hermanos h2 ~ p::before {
+    content: "»";
+    position: absolute;
+    left: 8px;
+    color: #0d47a1;
+}
+
+/* ========== PSEUDOCLASES ========== */
+/* Las pseudoclases seleccionan elementos en estados específicos */
+
+.pseudo-class {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.pseudo-class:hover {
+    /* Se aplica SOLO cuando el cursor está encima del elemento */
+    background-color: #ffeb3b;
+    color: #333;
+    transform: scale(1.05);
+}
+
+.pseudo-class:active {
+    /* Se aplica SOLO cuando el elemento está siendo activado (click) */
+    background-color: #ff9800;
+    transform: scale(0.98);
+}
