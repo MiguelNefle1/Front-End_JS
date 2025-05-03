@@ -1,0 +1,59 @@
+.section-beneficios {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .beneficios-box {
+        border: 1px solid #cce7d0;
+        border-radius: 4px;
+        width: 180px;
+        text-align: center;
+        margin: 15px 0;
+        padding: 25px 15px;
+        box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+        /* Transición personalizada */
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        /* Fondo sólido para evitar parpadeos */
+        background: white;
+
+        & h6 {
+            padding: 9px 8px 6px;
+            line-height: 1;
+            border-radius: 4px;
+            color: #088178;
+            background-color: #fddde4;
+            display: inline-block;
+            /* Transición para el título */
+            transition: transform 0.3s ease;
+        }
+
+        & img {
+            width: 100%;
+            margin-bottom: 10px;
+            /* Transición para la imagen */
+            transition: transform 0.5s ease;
+        }
+    }
+
+    .beneficios-box:hover {
+        /* Elevación más pronunciada */
+        transform: translateY(-8px);
+        /* Sombra más difuminada y centrada */
+        box-shadow: 0 15px 30px rgba(70, 62, 221, 0.15);
+        /* Borde sutilmente coloreado */
+        border-color: rgba(70, 62, 221, 0.2);
+
+        & h6 {
+            /* Efecto de "zoom" en el título */
+            transform: scale(1.05);
+            /* Cambio de color interactivo */
+            background-color: #ffc0cb;
+        }
+
+        & img {
+            /* Efecto de levitación + ligera rotación */
+            transform: scale(1.05) rotate(2deg);
+        }
+    }
+}
