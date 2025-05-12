@@ -1,0 +1,126 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    /* Box-model: borde, padding */
+    border: 2px solid #ddd;
+    padding: 20px;
+    /* Box-model: box-shadow */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabecera */
+.cabecera {
+    /* Box-model: margin, padding */
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    /* Box-model: border-radius */
+    border-radius: 8px;
+}
+
+/* Ejemplo de CSS nesting */
+.articulo {
+    /* Box-model: margin, padding, border */
+    margin-bottom: 25px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+
+    /* CSS nesting para el título del artículo */
+    & h2 {
+        color: #2c3e50;
+        margin-top: 0;
+        /* Box-model: border-bottom */
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 8px;
+    }
+
+    /* CSS nesting para la imagen */
+    & .imagen-articulo {
+        /* Box-model: width, height, margin */
+        width: 100%;
+        height: auto;
+        margin: 15px 0;
+        /* Box-model: border, border-radius */
+        border: 3px solid #eee;
+        border-radius: 5px;
+    }
+
+    /* CSS nesting para párrafos */
+    & p {
+        margin: 12px 0;
+    }
+
+    /* CSS nesting para la etiqueta de categoría */
+    & .categoria {
+        display: inline-block;
+        /* Box-model: padding, margin, border-radius */
+        padding: 5px 10px;
+        margin-right: 10px;
+        border-radius: 15px;
+        background-color: #e74c3c;
+        color: white;
+        font-size: 0.8em;
+    }
+}
+
+/* Elemento destacado para mostrar box-model más complejo */
+.destacado {
+    /* Box-model completo */
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px dashed #e74c3c;
+    border-radius: 10px;
+    background-color: #fff8dc;
+    /* Box-model: box-sizing */
+    box-sizing: border-box;
+}
+
+/* Pie de página */
+.pie-pagina {
+    /* Box-model: margin-top, padding */
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #2c3e50;
+    color: white;
+    /* Box-model: border-radius */
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Lista de enlaces en footer - ejemplo de herencia y nesting */
+.enlaces {
+    margin-top: 15px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    /* CSS nesting para los enlaces */
+    & a {
+        color: inherit; /* Herencia del color del texto del padre */
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: background-color 0.3s;
+    }
+
+    & a:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}

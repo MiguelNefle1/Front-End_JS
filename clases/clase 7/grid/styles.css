@@ -1,0 +1,158 @@
+/* Mejora visual general */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 20px;
+}
+
+h2 {
+    background-color: #14213d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+/* Mejora de cajas grid */
+.item {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+
+.item:hover {
+    transform: scale(1.03);
+    /* Efecto al pasar el mouse */
+}
+
+/* Colores únicos para elementos especiales */
+.item-span {
+    background-color: #ffe8a1;
+}
+
+.header {
+    background-color: #023e8a !important;
+}
+
+.sidebar {
+    background-color: #48cae4 !important;
+}
+
+.main {
+    background-color: #ade8f4 !important;
+}
+
+.footer {
+    background-color: #03045e !important;
+    color: white !important;
+}
+
+
+/* --------------------------------------------------------- */
+/* Declaración de grid */
+.grid-1 {
+    display: grid;
+    /* Activa grid */
+    grid-template-columns: 100px 200px;
+    /* 2 columnas */
+    grid-template-rows: 50px 100px;
+    /* 2 filas */
+    gap: 10px;
+    /* Espacio entre ítems */
+    margin-bottom: 30px;
+}
+
+/* Usando fracción (fr) */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* 2 columnas: proporcionales */
+    grid-template-rows: 1fr 1fr;
+    /* 2 filas iguales */
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Usando repeat */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas iguales */
+    grid-template-rows: repeat(2, 100px);
+    /* 2 filas iguales */
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Usando grid-column y grid-row */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.item-span {
+    grid-column: 1 / 3;
+    /* Ocupa columnas 1 y 2 */
+    grid-row: 1 / 3;
+    /* Ocupa ambas filas */
+    background: #ffa;
+}
+
+/* Usando grid-template-areas */
+.grid-5 {
+    display: grid;
+    grid-template-areas:
+        "header  header"
+        "sidebar main"
+        "footer  footer";
+    grid-template-columns: 200px 1fr;
+    /* Sidebar más angosto */
+    grid-template-rows: 80px 300px 60px;
+    /* Alturas más realistas */
+    gap: 10px;
+    margin-bottom: 30px;
+    height: auto;
+}
+
+.header {
+    grid-area: header;
+    background: #0077b6;
+    color: white;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #90e0ef;
+}
+
+.main {
+    grid-area: main;
+    background: #caf0f8;
+}
+
+.footer {
+    grid-area: footer;
+    background: #03045e;
+    color: white;
+}
+
+/* Estilo general de cajas */
+.item {
+    background: #ddd;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    border: 1px solid #999;
+}
