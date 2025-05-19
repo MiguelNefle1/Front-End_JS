@@ -60,3 +60,58 @@
 
 
 }
+
+
+/* Estilos Responsive para Newsletter */
+@media (max-width: 1200px) {
+    .newsletter {
+        padding: 40px 60px;
+    }
+    
+    .newsletter .form {
+        width: 45%;
+    }
+}
+
+@media (max-width: 992px) {
+    .newsletter {
+        .form {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .newsletter {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .newstext {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+
+    }
+
+}
+
+@media (max-width: 576px) {
+    .newsletter {
+        padding: 20px 10px;
+
+        & h4 {
+            font-size: 18px;
+        }
+
+        .form {
+
+            width: 100%;
+
+            & button {
+                padding: 12px 15px;
+            }
+
+        }
+    }
+}
